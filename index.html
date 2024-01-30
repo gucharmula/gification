@@ -18,9 +18,10 @@
   
   function setup(){
     nn.get('body').css({'background-color': bgColor})
-    const x = nn.width / 2
-    const y = nn.height / 2
-    create_gif(x, y, 140, 140, gifURL)
+    const s = 140
+    const x = nn.width / 2 - s / 2
+    const y = nn.height / 2 - s / 2
+    create_gif(x, y, s, s, gifURL)
   }
   
   nn.on('load', setup)
